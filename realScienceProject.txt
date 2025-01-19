@@ -59,7 +59,8 @@ Buildings
 		name:Devtool|devtools
 		desc:to test my stuff
 		cost:1 dollars
-		on tick:yield 1000000000 dollars, yield 100 bitcoin
+		on tick:yield 1000000000 dollars
+		on tick:yield 100 bitcoin
 		icon:icons[9,0]
 		unlocked
 
@@ -91,7 +92,8 @@ Buildings
 		desc:This is legal... right?<//><b>Effect:</b><.>Produces .01 Bitcoins per 1 seconds and .0002 degrees.
 		icon:icons[2,0]
 		cost:1000 dollars
-		on tick:yield 0.01 bitcoins, .0002 degrees
+		on tick:yield 0.01 bitcoins
+		on tick:yield .0002 degrees
 		req:500 dollars:earned
 	
 	*job|jobs
