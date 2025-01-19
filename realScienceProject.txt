@@ -64,7 +64,6 @@ Resources
 		icon:https://dorolfe.github.io/david-idle/Money.png
 		class:noBackground
 		show earned
-		can be negative
 		
 	*bitcoin|bitcoins
 		name:Bitcoin|Bitcoins
@@ -244,8 +243,8 @@ Achievements
 	*badAchievement1
 		name:Catastrophic solar dimming
 		desc:If it gets too cold farms can't produce enough food. Everyone's dead.
+		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
 		req:degrees<50
-		//icon:icons[2,4] icons[0,2] icons[0,6]
 
 	*undergroundMovement
 		name:Everyone moves underground
@@ -256,4 +255,6 @@ Achievements
 	*badAchievement2
 		name:You Died!
 		desc:The temperature got too hot and life could not survive. Humans have been forced to evacuate 1,000 feet underground.
+		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
 		req:degrees>130
+		
