@@ -55,7 +55,7 @@ Resources
 		desc:Don't let this get too high or wildfires will burn down all your progress!
 		on tick:yield .01 degrees
 		start with:70 degrees
-	//ideas: Reforestation, solar dimming array, carbon capture
+	//ideas:Reforestation, solar dimming array, carbon capture
 		
 Buildings
 	*TEMPLATE
@@ -122,12 +122,12 @@ Buildings
 		req:7500 dollars:earned
 
 	*carbonCapturePlant|carbonCapturePlants
-		name: Carbon Capture Plant|Carbon Capture Plants
+		name:Carbon Capture Plant|Carbon Capture Plants
 		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
 		icon:icons[9,0]
 		on tick:degrees is degrees-.001 
-		cost: 200000 dollars
-		limit: 100
+		cost:200000 dollars
+		limit:100
 		cost increase:150%
 		
 	*antminer|antminer
@@ -178,20 +178,20 @@ Buildings
 	
 	*president|president
 		name:President|Presidents
-		desc: You are the commander of the world now. <//><i>Congratulations.</i>
+		desc:You are the commander of the world now. <//><i>Congratulations.</i>
 		icon:icons[12,0]
-		cost: 900000 dollars, 500 bitcoins
+		cost:900000 dollars, 500 bitcoins
 		limit:1
 
 	*sunShade|sunShades
-		name: Solar Dimming Array Launch| Solar Dimming Array Launch
-		desc: Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
+		name:Solar Dimming Array Launch| Solar Dimming Array Launch
+		desc:Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
 		icon:icons[13,0]
-		req: president=1
-		cost: 100000000 dollars
-		limit: 1000 
+		req:president=1
+		cost:100000000 dollars
+		limit:1000 
 		cost increase:95%
-		//on tick: yield -0.002 degrees
+		//on tick:yield -0.002 degrees
 		on tick:degrees is degrees-.002 
 
 
@@ -206,7 +206,7 @@ Upgrades
 		cost:100 dollars
 
 	*solarRoof
-		name: Solar Roof
+		name:Solar Roof
 		desc:By using renewable power <//><b>Effect:</b><.>Increases output of Bitcoin miners without increasing warming.
 		passive:multiply yield of tag:miner by 99%
 		cost:100 dollars
