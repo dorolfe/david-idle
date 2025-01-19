@@ -24,7 +24,7 @@ Buttons
 		desc:Click this dollar to make more money.
 		on click:anim icon wobble
 		on click:yield 1 dollar
-		icon:https://dorolfe.github.io/david-idle/Money.png
+		icon:https://dorolfe.github.io/david-idle/Dollar.png
 		no text
 		class:bigButton hasFlares
 		icon class:shadowed
@@ -35,7 +35,7 @@ Resources
 	*dollar|dollars
 		name:Dollar|Dollars
 		desc:Survive by making money or die trying.
-		icon:icons[0,0]
+		icon:https://dorolfe.github.io/david-idle/Money.png
 		class:noBackground
 		show earned
 		
@@ -45,6 +45,13 @@ Resources
 		icon:icons[0,1]
 		class:noBackground
 		hidden when 0
+
+	*degree|degrees
+		name:Temperature
+		desc:Don't let this get too high or wildfires will burn down all your progress!
+		on tick:yield .01 degrees
+		start with:70 degrees
+	//ideas: Reforestation, solar dimming array, carbon capture
 		
 Buildings
 	*TEMPLATE
@@ -54,92 +61,136 @@ Buildings
 		name:Devtool|devtools
 		desc:to test my stuff
 		cost:1 dollars
-		on tick:yeild 1000000000
+		on tick:yield 1000000000
+		icon:icons[9,0]
 		unlocked
-		
+
 	*mouse|mice
 		name:Mouce|Mice
-		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 1 Dollar every 1 seconds.
-		icon:icons[3,0]
-		cost:25 dollars
-		on tick:yield 1 dollar
+		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 5 Dollar every 1 seconds.
+		icon:icons[0,0]
+		cost:100 dollars
+		on tick:yield 5 dollar
 		unlocked
 	
 	*sponsership|sponsorships
 		name:Sponsership|Sponsorships
-		desc:Turns out you can turn a profit by promoting products.<//><b>Effect:</b><.>Produces 10 Dollars every 2 seconds.
-		icon:icons[3,1]
-		cost:100 dollars
-		on tick:yield 5 dollars
-		req:100 dollars:earned
-	
+		desc:Turns out you can turn a profit by promoting products.<//><b>Effect:</b><.>Produces 150 Dollars every 1 seconds.
+		icon:icons[1,0]
+		cost:1000 dollars
+		on tick:yield 150 dollars
+		req:150 dollars:earned
+
+	*airConditioningUnit|airConditioningUnits
+		name:AC Unit| AC Units
+		desc:cools your temperature by 0.0001 per second. <//><b>Effect:</b><.>Max of 10
+		cost:1000 dollars
+		on tick:lose .0001 degrees
+		limit:10
+
 	*bitcoinminer|bitcoinminers
 		name:Bitcoin Miner|Bitcoin Miners
-		desc:This is legal... right?<//><b>Effect:</b><.>Produces .01 Bitcoins per 1 seconds.
-		icon:icons[3,2]
+		desc:This is legal... right?<//><b>Effect:</b><.>Produces .01 Bitcoins per 1 seconds and .0002 degrees.
+		icon:icons[2,0]
 		cost:1000 dollars
-		on tick:yield 0.01 bitcoins
+		on tick:yield 0.01 bitcoins, .0002 degrees
 		req:500 dollars:earned
 	
 	*job|jobs
 		name:Job|Jobs
-		desc:Turns out working for someone makes decent money. Now to start climbing the corporate ladder and arguing with your manager.<//><b>Effect:</b><.>Produces 15 dollars per second.
-		icon:icons[3,3]
+		desc:Turns out working for someone makes decent money. Now to start climbing the corporate ladder and arguing with your manager.<//><b>Effect:</b><.>Produces 500 dollars per second.
+		icon:icons[3,0]
 		cost:2500 dollars
-		on tick:yield 15 dollars
+		on tick:yield 500 dollars
 		req:2500 dollars:earned
 	
 	*shopify|shopify
 		name:Shopify|Shopify
-		desc:Start an online business.<//><b>Effect:</b><.>Produces 40 rabbits per second.
-		icon:icons[3,4]
-		cost:5000 dollars
-		on tick:yield 40 dollars
-		req:5000 dollars:earned
-	
+		desc:Start an online business.<//><b>Effect:</b><.>Produces 1000 dollars per second.
+		icon:icons[4,0]
+		cost:7500 dollars
+		on tick:yield 1000 dollars
+		req:7500 dollars:earned
+
+	*carbonCapturePlant|carbonCapturePlants
+		name: Carbon Capture Plant|Carbon Capture Plants
+		desc:
+		on tick:lose .001
+		cost: 20000
+		limit: 100
+		building cost increase:150%
+		
 	*antminer|antminer
 		name:Antminer|Antminer
-		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.05 bitcoins every second.
-		icon:icons[3,5]
+		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.02 bitcoins every second.
+		icon:icons[5,0]
 		cost:50000 dollars, 5 bitcoins
 		on tick:if (have bitcoinminer) yield 0.05 bitcoins
 		req:1 bitcoins:earned
 		
 	*manager|manager
 		name:Manager|Manager
-		desc:The second level of the corporate ladder. You have become your own worst enemy.<//><b>Effect:</b><.>Produces 1000 dollars per second.
-		icon:icons[3,6]
+		desc:The second level of the corporate ladder. You have become your own worst enemy.<//><b>Effect:</b><.>Produces 5000 dollars per second.
+		icon:icons[6,0]
 		cost:100000 dollars
-		on tick:yield 1000 dollars
+		on tick:yield 5000 dollars
 		req:100000 dollars:earned
 
 *antminers21|antminers21
 		name:AntminerS21|AntminerS21
-		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.5 bitcoins per second.
-		icon:icons[3,5]
+		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.1 bitcoins per second.
+		icon:icons[7,0]
 		cost:150000 dollars, 10 bitcoins
 		on tick:if (have antminer) yield 0.5 bitcoins
 		req:10 bitcoins:earned
 		
 	*socialmedia|socialmedia
 		name:Social Media|Social Media
-		desc:Start spreading your popularity through the wide world of web.<//><b>Effect:</b><.>Produces 2500 dollars per second.
-		icon:icons[3,7]
-		cost:30000000 dollars, 15 bitcoins
-		on tick:yield 4000 dollars
+		desc:Start spreading your popularity through the wide world of web.<//><b>Effect:</b><.>Produces 50000 dollars per second.
+		icon:icons[8,0]
+		cost:3000000 dollars, 15 bitcoins
+		on tick:yield 50000 dollars
 		req:30000000 dollars:earned
 		
 	*CEO|CEOs
 		name:CEO|CEOs
-		desc:The top of the ladder, congratulations. Try not to get arrested for corporate fraud.<//><b>Produces 5000 dollars per second.
-		icon:icons[3,8]
-		cost:300000000 dollars, 100 bitcoins
-		req:70000000 dollars:earned
-		limit:100
+		desc:The top of the ladder, congratulations. Try not to get arrested for corporate fraud.<//><b>Produces 100000 dollars per second.
+		icon:icons[9,0]
+		cost:7000000 dollars, 100 bitcoins
+		on tick:yield 100000 dollars
+		req:7000000 dollars:earned
+		limit:10
 		cost increase:105%
 	
+	*president|president
+		name:President|Presidents
+		desc: You are the commander of the world now. <//><i>Congratulations.</i>
+		cost: 75000000 dollars, 500 bitcoins
+		limit:1
+
+	*sunShade|sunShades
+		name: Solar Dimming Array Launch| Solar Dimming Array Launch
+		desc: Launch a part of a solar dimming satilite arrray, to reflect sunlight away from Earth. <//><b> Cools the planet
+		req: president=1
+		cost: 100000000 dollars
+		limit: 1000 
+		cost increase 95%
+		on tick: lose 0.002
+
+
 Upgrades
 
-	*autoclicker|autoclickers
-	name:Auto Clicker|Auto Clickers
-	desc:<//><b>Effect:</b><.>Increases mouse production by 1%
+//ideas: Green roof, solar roof, reforestation
+
+	*autoclicker
+		name:Auto Clicker
+		desc:Why waste your time clicking manually to make money?<//><b>Effect:</b><.>Increases click value by 100%
+		passive:multiply yield of dollarButton by 2
+		cost:100 dollars
+
+	*solarRoof
+		name: Solar Roof
+		desc:By using renewable power <//><b>Effect:</b><.>Decreases heat output of all Bitcoin miners.
+		passive:multiply yield 
+		cost:100 dollars
+		on earn: passive
