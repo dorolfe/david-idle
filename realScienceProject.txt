@@ -31,19 +31,21 @@ Buttons
 		req:degrees>50
 		req:degrees<130
 
-	*youDiedButton
-		name:You are dead
-		desc:Earth's temperature became uninhabitable. 98% of human life is dead. Some underground colonies survive.
-		req:degrees>130
-		icon:https://dorolfe.github.io/david-idle/youdiedbutton.png
-		class:bigButton
-
 	*youFrozeButton
 		name:You are dead
 		desc:Earth's temperature became uninhabitable. Food production was impossible for most habitable zones. 70% of human life is dead.
-		req:degrees<50
 		icon:https://dorolfe.github.io/david-idle/youdiedbutton.png
 		class:bigButton
+		req:(badAchievement1)
+		req:degrees<50
+
+	*youDiedButton
+		name:You are dead
+		desc:Earth's temperature became uninhabitable. 98% of human life is dead. Some underground colonies survive.
+		icon:https://dorolfe.github.io/david-idle/youDiedbutton-hot.png
+		class:bigButton
+		req:(badAchievement2)
+		req:degrees>130
 		
 		
 
@@ -74,7 +76,7 @@ Resources
 	*degree|degrees
 		name:Temperature
 		desc:Don't let this get too high or wildfires will burn down all your progress!
-		on tick:yield .01 degrees
+		on tick:yield .02 degrees
 		start with:70 degrees
 	//ideas:Reforestation, solar dimming array, carbon capture
 		
@@ -122,7 +124,7 @@ Buildings
 		icon:icons[2,0]
 		cost:1000 dollars
 		on tick:yield 0.01 bitcoins
-		on tick:degrees is degrees+.001
+		on tick:degrees is degrees+.01
 		req:500 dollars:earned
 		tag:miner
 	
@@ -157,7 +159,7 @@ Buildings
 		icon:icons[5,0]
 		cost:50000 dollars, 5 bitcoins
 		on tick:if (have bitcoinminer) yield 0.05 bitcoins
-		on tick:degrees is degrees+.002
+		on tick:degrees is degrees+.03
 		req:1 bitcoins:earned
 		tag:miner
 		
@@ -175,7 +177,7 @@ Buildings
 		icon:icons[7,0]
 		cost:150000 dollars, 10 bitcoins
 		on tick:if (have antminer) yield 0.5 bitcoins
-		on tick:degrees is degrees+.008
+		on tick:degrees is degrees+.09
 		req:10 bitcoins:earned
 		tag:miner
 		
