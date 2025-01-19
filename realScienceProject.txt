@@ -28,6 +28,24 @@ Buttons
 		icon class:shadowed
 		tooltip origin:bottom
 		tooltip class:red
+		req:degrees>50
+		req:degrees<130
+
+	*youDiedButton
+		name:You are dead
+		desc:Earth's temperature became uninhabitable. 98% of human life is dead. Some underground colonies survive.
+		req:degrees>130
+		icon:https://dorolfe.github.io/david-idle/youdiedbutton.png
+
+	*youFrozeButton
+		name:You are dead
+		desc:Earth's temperature became uninhabitable. Food production was impossible for most habitable zones. 70% of human life is dead.
+		req:degrees<50
+		icon:https://dorolfe.github.io/david-idle/youdiedbutton.png
+		
+		
+
+
 
 		/*
 		nuclear strike
@@ -42,6 +60,7 @@ Resources
 		icon:https://dorolfe.github.io/david-idle/Money.png
 		class:noBackground
 		show earned
+		can be negative
 		
 	*bitcoin|bitcoins
 		name:Bitcoin|Bitcoins
@@ -189,10 +208,10 @@ Buildings
 		icon:icons[13,0]
 		req:president=1
 		cost:100000000 dollars
-		limit:1000 
-		cost increase:95%
-		//on tick:yield -0.002 degrees
-		on tick:degrees is degrees-.002 
+		limit:500
+		cost increase:99.5%
+		//on tick:yield -0.008 degrees
+		on tick:degrees is degrees-.008
 
 
 Upgrades
@@ -211,3 +230,25 @@ Upgrades
 		passive:multiply yield of tag:miner by 99%
 		cost:100 dollars
 		//on earn:
+
+Achievements
+
+	*TEMPLATE
+		on click:anim glow
+		
+	*badAchievement1
+		name:Catastrophic solar dimming
+		desc:If it gets too cold farms can't produce enough food. Everyone's dead.
+		req:degrees<50
+		//icon:icons[2,4] icons[0,2] icons[0,6]
+
+	*undergroundMovement
+		name:Everyone moves underground
+		desc:The surface is now too hot to sustain life. All humans have been forced to move 1,000 ft underground. The cost was enormous.
+		req:degrees>120
+		on earn:lose 1000000000000 dollars
+
+	*badAchievement2
+		name:You Died!
+		desc:The temperature got too hot and life could not survive. Humans have been forced to evacuate 1,000 feet underground.
+		req:degrees>130
