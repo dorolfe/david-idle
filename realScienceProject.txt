@@ -7,7 +7,7 @@ Let's make a game!
 	version:1.1
 
 Settings
-	background:stuff/meadow.jpg
+	background:https://dorolfe.github.io/david-idle/Background.png
 	building cost increase:115%
 	building cost refund:50%
 	spritesheet:icons, 48 by 48, https://dorolfe.github.io/david-idle/spritesheet.png
@@ -46,7 +46,7 @@ Resources
 	*bitcoin|bitcoins
 		name:Bitcoin|Bitcoins
 		desc:A much more valuable yet rare currency
-		icon:icons[0,1]
+		icon:icons[2,0]
 		class:noBackground
 		hidden when 0
 
@@ -89,6 +89,7 @@ Buildings
 	*airConditioningUnit|airConditioningUnits
 		name:AC Unit| AC Units
 		desc:cools your temperature by 0.0001 per second. <//><b>Effect:</b><.>Max of 10
+		icon:icons[11,0]
 		cost:1000 dollars
 		on tick:lose .0001 degrees
 		limit:10
@@ -122,11 +123,11 @@ Buildings
 	*carbonCapturePlant|carbonCapturePlants
 		name: Carbon Capture Plant|Carbon Capture Plants
 		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
+		incon:icons[9,0]
 		on tick:degrees is degrees-.001 
-		cost: 200000 dollar
+		cost: 200000 dollars
 		limit: 100
 		cost increase:150%
-		//we can edit the same file at the same time.
 		
 	*antminer|antminer
 		name:Antminer|Antminer
@@ -146,7 +147,7 @@ Buildings
 		on tick:yield 5000 dollars
 		req:100000 dollars:earned
 
-*antminers21|antminers21
+	*antminers21|antminers21
 		name:AntminerS21|AntminerS21
 		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.1 bitcoins per second.
 		icon:icons[7,0]
@@ -177,12 +178,14 @@ Buildings
 	*president|president
 		name:President|Presidents
 		desc: You are the commander of the world now. <//><i>Congratulations.</i>
-		cost: 75000000 dollars, 500 bitcoins
+		icon:icons[12,0]
+		cost: 9000000 dollars, 500 bitcoins
 		limit:1
 
 	*sunShade|sunShades
 		name: Solar Dimming Array Launch| Solar Dimming Array Launch
 		desc: Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
+		icon:icons[13,0]
 		req: president=1
 		cost: 100000000 dollars
 		limit: 1000 
