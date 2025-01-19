@@ -59,13 +59,13 @@ Buildings
 		name:Devtool|devtools
 		desc:to test my stuff
 		cost:1 dollars
-		on tick:yield 1000000000
+		on tick:yield 1000000000 dollars, yield 100 bitcoin
 		icon:icons[9,0]
 		unlocked
 
 	*mouse|mice
 		name:Mouse|Mice
-		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 5 Dollar every 1 seconds.
+		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 5 dollar every 1 seconds.
 		icon:icons[0,0]
 		cost:100 dollars
 		on tick:yield 5 dollar
@@ -73,7 +73,7 @@ Buildings
 	
 	*sponsorship|sponsorships
 		name:Sponsorship|Sponsorships
-		desc:Turns out you can turn a profit by promoting products.<//><b>Effect:</b><.>Produces 150 Dollars every 1 seconds.
+		desc:Turns out you can turn a profit by promoting products.<//><b>Effect:</b><.>Produces 150 dollars every 1 seconds.
 		icon:icons[1,0]
 		cost:1000 dollars
 		on tick:yield 150 dollars
