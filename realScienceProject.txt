@@ -115,7 +115,7 @@ Buildings
 	*carbonCapturePlant|carbonCapturePlants
 		name: Carbon Capture Plant|Carbon Capture Plants
 		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
-		on tick:lose .001 degrees
+		on tick:yield -.001 degrees
 		cost: 20000 dollar
 		limit: 100
 		cost increase:150%
