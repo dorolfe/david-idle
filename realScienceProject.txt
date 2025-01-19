@@ -97,7 +97,7 @@ Buildings
 		name:Mouse|Mice
 		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 5 dollar every 1 seconds.
 		icon:icons[0,0]
-		cost:100 dollars
+		cost:50 dollars
 		on tick:yield 5 dollar
 		unlocked
 	
@@ -225,6 +225,13 @@ Upgrades
 	*autoclicker
 		name:Auto Clicker
 		desc:Why waste your time clicking manually to make money?<//><b>Effect:</b><.>Increases click value by 100%
+		passive:yield 1 dollar
+		on tick:yield 1 dollar
+		cost:100 dollars
+
+	*fasterPC
+		name:Faster Computer
+		desc:Get more work done with every click!<//><b>Effect:</b><.>Increases click value by 100%
 		passive:multiply yield of dollarButton by 2
 		cost:100 dollars
 
