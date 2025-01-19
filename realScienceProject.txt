@@ -89,6 +89,7 @@ Buildings
 	*airConditioningUnit|airConditioningUnits
 		name:AC Unit| AC Units
 		desc:cools your temperature by 0.0001 per second. <//><b>Effect:</b><.>Max of 10
+		req: 71 degrees
 		icon:icons[11,0]
 		cost:1000 dollars
 		on tick:lose .0001 degrees
@@ -179,7 +180,7 @@ Buildings
 		name:President|Presidents
 		desc: You are the commander of the world now. <//><i>Congratulations.</i>
 		icon:icons[12,0]
-		cost: 9000000 dollars, 500 bitcoins
+		cost: 900000 dollars, 500 bitcoins
 		limit:1
 
 	*sunShade|sunShades
