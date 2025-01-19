@@ -115,8 +115,8 @@ Buildings
 	*carbonCapturePlant|carbonCapturePlants
 		name: Carbon Capture Plant|Carbon Capture Plants
 		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
-		on tick:lose .001
-		cost: 20000
+		on tick:lose .001 degrees
+		cost: 20000 dollar
 		limit: 100
 		cost increase:150%
 		//we can edit the same file at the same time.
@@ -176,7 +176,7 @@ Buildings
 		cost: 100000000 dollars
 		limit: 1000 
 		cost increase:95%
-		on tick: lose 0.002
+		on tick: lose 0.002 degrees
 
 
 Upgrades
@@ -192,6 +192,6 @@ Upgrades
 	*solarRoof
 		name: Solar Roof
 		desc:By using renewable power <//><b>Effect:</b><.>Decreases heat output of all Bitcoin miners.
-		passive:multiply yield 
+		passive:multiply yield degrees 99%
 		cost:100 dollars
-		on earn: passive
+		//on earn:
