@@ -176,7 +176,7 @@ Buildings
 		cost: 100000000 dollars
 		limit: 1000 
 		cost increase:95%
-		on tick: lose 0.002 degrees
+		on tick: yield -0.002 degrees
 
 
 Upgrades
