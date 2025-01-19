@@ -36,12 +36,14 @@ Buttons
 		desc:Earth's temperature became uninhabitable. 98% of human life is dead. Some underground colonies survive.
 		req:degrees>130
 		icon:https://dorolfe.github.io/david-idle/youdiedbutton.png
+		class:bigButton
 
 	*youFrozeButton
 		name:You are dead
 		desc:Earth's temperature became uninhabitable. Food production was impossible for most habitable zones. 70% of human life is dead.
 		req:degrees<50
 		icon:https://dorolfe.github.io/david-idle/youdiedbutton.png
+		class:bigButton
 		
 		
 
@@ -120,7 +122,7 @@ Buildings
 		icon:icons[2,0]
 		cost:1000 dollars
 		on tick:yield 0.01 bitcoins
-		on tick:degrees is degrees+.0002
+		on tick:degrees is degrees+.001
 		req:500 dollars:earned
 		tag:miner
 	
@@ -150,12 +152,12 @@ Buildings
 		cost increase:150%
 		
 	*antminer|antminer
-		name:Antminer|Antminer
+		name:Antminer
 		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.02 bitcoins every second.
 		icon:icons[5,0]
 		cost:50000 dollars, 5 bitcoins
 		on tick:if (have bitcoinminer) yield 0.05 bitcoins
-		on tick:degrees is degrees+.0003
+		on tick:degrees is degrees+.002
 		req:1 bitcoins:earned
 		tag:miner
 		
@@ -168,12 +170,12 @@ Buildings
 		req:100000 dollars:earned
 
 	*antminers21|antminers21
-		name:AntminerS21|AntminerS21
+		name:SealMiner
 		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.1 bitcoins per second.
 		icon:icons[7,0]
 		cost:150000 dollars, 10 bitcoins
 		on tick:if (have antminer) yield 0.5 bitcoins
-		on tick:degrees is degrees+.0004
+		on tick:degrees is degrees+.008
 		req:10 bitcoins:earned
 		tag:miner
 		
