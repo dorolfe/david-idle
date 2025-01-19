@@ -1,0 +1,138 @@
+Let's make a game!
+	name:Science Project
+	by:Owen Rolfe
+	desc:My science project/idle clicker game. Simulating life 100 years in the future and trying to become the richest man on earth<//>Make money you capitalist.
+	created:01/11/2024
+	updated:01/11/2024
+	version:1.1
+
+Settings
+	background:stuff/meadow.jpg
+	building cost increase:115%
+	building cost refund:50%
+	spritesheet:icons, 48 by 48, https://dorolfe.github.io/david-idle/spritesheet.jpg
+	stylesheet:stuff/bigBlue.css
+
+
+
+Layout
+	use default
+
+Buttons
+	*dollarButton
+		name:Make a dollar
+		desc:Click this dollar to make more money.
+		on click:anim icon wobble
+		on click:yield 1 dollar
+		icon:stuff/bunny.png
+		no text
+		class:bigButton hasFlares
+		icon class:shadowed
+		tooltip origin:bottom
+		tooltip class:red
+
+Resources
+	*dollar|dollars
+		name:Dollar|Dollars
+		desc:Survive by making money or die trying.
+		icon:icons[0,0]
+		class:noBackground
+		show earned
+		
+	*bitcoin|bitcoins
+		name:Bitcoin|Bitcoins
+		desc:A much more valuable yet rare currency
+		icon:icons[0,1]
+		class:noBackground
+		hidden when 0
+		
+Buildings
+	*TEMPLATE
+		on click:anim glow
+		
+	*mouse|mice
+		name:Mouce|Mice
+		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 1 Dollar every 1 seconds.
+		icon:icons[3,0]
+		cost:25 dollars
+		on tick:yield 1 dollar
+		unlocked
+	
+	*sponsership|sponsorships
+		name:Sponsership|Sponsorships
+		desc:Turns out you can turn a profit by promoting products.<//><b>Effect:</b><.>Produces 10 Dollars every 2 seconds.
+		icon:icons[3,1]
+		cost:100 dollars
+		on tick:yield 5 dollars
+		req:100 dollars:earned
+	
+	*bitcoinminer|bitcoinminers
+		name:Bitcoin Miner|Bitcoin Miners
+		desc:This is legal... right?<//><b>Effect:</b><.>Produces .01 Bitcoins per 1 seconds.
+		icon:icons[3,2]
+		cost:1000 dollars
+		on tick:yield 0.01 bitcoins
+		req:500 dollars:earned
+	
+	*job|jobs
+		name:Job|Jobs
+		desc:Turns out working for someone makes decent money. Now to start climbing the corporate ladder and arguing with your manager.<//><b>Effect:</b><.>Produces 15 dollars per second.
+		icon:icons[3,3]
+		cost:2500 dollars
+		on tick:yield 15 dollars
+		req:2500 dollars:earned
+	
+	*shopify|shopify
+		name:Shopify|Shopify
+		desc:Start an online business.<//><b>Effect:</b><.>Produces 40 rabbits per second.
+		icon:icons[3,4]
+		cost:5000 dollars
+		on tick:yield 40 dollars
+		req:5000 dollars:earned
+	
+	*antminer|antminer
+		name:Antminer|Antminer
+		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.05 bitcoins every second.
+		icon:icons[3,5]
+		cost:50000 dollars, 5 bitcoins
+		on tick:if (have bitcoinminer) yield 0.05 bitcoins
+		req:1 bitcoins:earned
+		
+	*manager|manager
+		name:Manager|Manager
+		desc:The second level of the corporate ladder. You have become your own worst enemy.<//><b>Effect:</b><.>Produces 1000 dollars per second.
+		icon:icons[3,6]
+		cost:100000 dollars
+		on tick:yield 1000 dollars
+		req:100000 dollars:earned
+
+*antminers21|antminers21
+		name:AntminerS21|AntminerS21
+		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.5 bitcoins per second.
+		icon:icons[3,5]
+		cost:150000 dollars, 10 bitcoins
+		on tick:if (have antminer) yield 0.5 bitcoins
+		req:10 bitcoins:earned
+		
+	*socialmedia|socialmedia
+		name:Social Media|Social Media
+		desc:Start spreading your popularity through the wide world of web.<//><b>Effect:</b><.>Produces 2500 dollars per second.
+		icon:icons[3,7]
+		cost:30000000 dollars, 15 bitcoins
+		on tick:yield 4000 dollars
+		req:30000000 dollars:earned
+		
+	*CEO|CEOs
+		name:CEO|CEOs
+		desc:The top of the ladder, congratulations. Try not to get arrested for corporate fraud.<//><b>Produces 5000 dollars per second.
+		icon:icons[3,8]
+		cost:300000000 dollars, 100 bitcoins
+		req:70000000 dollars:earned
+		limit:100
+		cost increase:105%
+	
+Upgrades
+
+	*autoclicker|autoclickers
+	name:Auto Clicker|Auto Clickers
+	desc:<//><b>Effect:</b><.>Increases mouse production by 1%
