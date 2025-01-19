@@ -116,7 +116,7 @@ Buildings
 		name: Carbon Capture Plant|Carbon Capture Plants
 		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
 		on tick:degrees is degrees-.001 
-		cost: 20000 dollar
+		cost: 200000 dollar
 		limit: 100
 		cost increase:150%
 		//we can edit the same file at the same time.
@@ -176,7 +176,8 @@ Buildings
 		cost: 100000000 dollars
 		limit: 1000 
 		cost increase:95%
-		on tick: yield -0.002 degrees
+		//on tick: yield -0.002 degrees
+		on tick:degrees is degrees-.002 
 
 
 Upgrades
