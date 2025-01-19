@@ -116,7 +116,8 @@ Buildings
 		on tick:lose .001
 		cost: 20000
 		limit: 100
-		building cost increase:150%
+		cost increase:150%
+		//we can edit the same file at the same time.
 		
 	*antminer|antminer
 		name:Antminer|Antminer
