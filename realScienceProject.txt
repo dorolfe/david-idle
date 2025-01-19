@@ -224,7 +224,7 @@ Upgrades
 
 	*autoclicker
 		name:Auto Clicker
-		desc:Why waste your time clicking manually to make money?<//><b>Effect:</b><.>Increases click value by 100%
+		desc:Why waste your time clicking manually to make money?<//><b>Effect:</b><.>Clicks the mouse for $1 per second.
 		passive:yield 1 dollar
 		on tick:yield 1 dollar
 		cost:100 dollars
@@ -240,6 +240,7 @@ Upgrades
 		desc:By using renewable power <//><b>Effect:</b><.>Increases output of Bitcoin miners without increasing warming.
 		passive:multiply yield of tag:miner by 99%
 		cost:100 dollars
+		req:bitcoinminer
 		//on earn:
 
 Achievements
