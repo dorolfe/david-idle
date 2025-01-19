@@ -13,8 +13,6 @@ Settings
 	spritesheet:icons, 48 by 48, https://dorolfe.github.io/david-idle/spritesheet.png
 	stylesheet:stuff/bigBlue.css
 
-
-
 Layout
 	use default
 
@@ -66,15 +64,15 @@ Buildings
 		unlocked
 
 	*mouse|mice
-		name:Mouce|Mice
+		name:Mouse|Mice
 		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 5 Dollar every 1 seconds.
 		icon:icons[0,0]
 		cost:100 dollars
 		on tick:yield 5 dollar
 		unlocked
 	
-	*sponsership|sponsorships
-		name:Sponsership|Sponsorships
+	*sponsorship|sponsorships
+		name:Sponsorship|Sponsorships
 		desc:Turns out you can turn a profit by promoting products.<//><b>Effect:</b><.>Produces 150 Dollars every 1 seconds.
 		icon:icons[1,0]
 		cost:1000 dollars
@@ -114,7 +112,7 @@ Buildings
 
 	*carbonCapturePlant|carbonCapturePlants
 		name: Carbon Capture Plant|Carbon Capture Plants
-		desc:
+		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
 		on tick:lose .001
 		cost: 20000
 		limit: 100
@@ -154,7 +152,7 @@ Buildings
 		
 	*CEO|CEOs
 		name:CEO|CEOs
-		desc:The top of the ladder, congratulations. Try not to get arrested for corporate fraud.<//><b>Produces 100000 dollars per second.
+		desc:The top of the ladder, congratulations. Try not to get arrested for corporate fraud.<//><b>Effect:</b><.>Produces 100000 dollars per second.
 		icon:icons[9,0]
 		cost:7000000 dollars, 100 bitcoins
 		on tick:yield 100000 dollars
@@ -170,7 +168,7 @@ Buildings
 
 	*sunShade|sunShades
 		name: Solar Dimming Array Launch| Solar Dimming Array Launch
-		desc: Launch a part of a solar dimming satilite arrray, to reflect sunlight away from Earth. <//><b> Cools the planet
+		desc: Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
 		req: president=1
 		cost: 100000000 dollars
 		limit: 1000 
