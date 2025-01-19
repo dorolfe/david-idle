@@ -31,6 +31,7 @@ Buttons
 		req:degrees>50
 		req:degrees<130
 
+/*
 	*youFrozeButton
 		name:You are dead
 		desc:Earth's temperature became uninhabitable. Food production was impossible for most habitable zones. 70% of human life is dead.
@@ -38,7 +39,6 @@ Buttons
 		class:bigButton
 		req:(badAchievement1)
 		req:degrees<50
-/*
 	*youDiedButton
 		name:You are dead
 		desc:Earth's temperature became uninhabitable. 98% of human life is dead. Some underground colonies survive.
