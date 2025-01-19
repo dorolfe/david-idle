@@ -38,7 +38,7 @@ Buttons
 		class:bigButton
 		req:(badAchievement1)
 		req:degrees<50
-
+/*
 	*youDiedButton
 		name:You are dead
 		desc:Earth's temperature became uninhabitable. 98% of human life is dead. Some underground colonies survive.
@@ -46,7 +46,7 @@ Buttons
 		class:bigButton
 		req:(badAchievement2)
 		req:degrees>130
-		
+*/		
 		
 
 
