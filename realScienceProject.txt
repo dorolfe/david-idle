@@ -87,13 +87,13 @@ Buildings
 		req:150 dollars:earned
 
 	*airConditioningUnit|airConditioningUnits
-		name:AC Unit| AC Units
-		desc:cools your temperature by 0.0001 per second. <//><b>Effect:</b><.>Max of 10
+		name: AC Unit|AC Units
+		desc: Improve your climate at home. <//><b>Effect:</b><.>Cools your temperature by 0.0001 per second.<.>Max of 10
+		icon: icons[11,0]
+		cost: 1000 dollars
+		on tick: lose .0001 degrees
+		limit: 10
 		req: 71 degrees
-		icon:icons[11,0]
-		cost:1000 dollars
-		on tick:lose .0001 degrees
-		limit:10
 
 	*bitcoinminer|bitcoinminers
 		name:Bitcoin Miner|Bitcoin Miners
