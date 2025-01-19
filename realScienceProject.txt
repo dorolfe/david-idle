@@ -93,6 +93,7 @@ Buildings
 		icon:icons[9,0]
 		unlocked
 
+
 	*mouse|mice
 		name:Mouse|Mice
 		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 5 dollar every 1 seconds.
@@ -100,7 +101,8 @@ Buildings
 		cost:50 dollars
 		on tick:yield 5 dollar
 		unlocked
-	
+
+
 	*sponsorship|sponsorships
 		name:Sponsorship|Sponsorships
 		desc:Turns out you can turn a profit by promoting products.<//><b>Effect:</b><.>Produces 150 dollars every 1 seconds.
@@ -108,6 +110,7 @@ Buildings
 		cost:1000 dollars
 		on tick:yield 150 dollars
 		req:150 dollars:earned
+
 
 	*airConditioningUnit|airConditioningUnits
 		name:AC Unit|AC Units
@@ -117,6 +120,7 @@ Buildings
 		on tick:lose .0001 degrees
 		limit:10
 		req:71 degrees
+		show max
 
 	*bitcoinminer|bitcoinminers
 		name:Bitcoin Miner|Bitcoin Miners
@@ -127,7 +131,7 @@ Buildings
 		on tick:degrees is degrees+.01
 		req:500 dollars:earned
 		tag:miner
-	
+
 	*job|jobs
 		name:Job|Jobs
 		desc:Turns out working for someone makes decent money. Now to start climbing the corporate ladder and arguing with your manager.<//><b>Effect:</b><.>Produces 500 dollars per second.
@@ -144,13 +148,14 @@ Buildings
 		on tick:yield 1000 dollars
 		req:7500 dollars:earned
 
-	*carbonCapturePlant|carbonCapturePlants
-		name:Carbon Capture Plant|Carbon Capture Plants
-		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
-		icon:icons[9,0]
-		on tick:degrees is degrees-.001 
+	*cloudSeeding
+		name:Cloud seeding flight
+		desc:Launch a plane to spread reflective dust at very high altitude.<//><b>Effect:</b><.>Increases cloud cover, clouds reflect sunlight into space.<.>Cools the planet.
+		icon:icons[10,0]
+		on tick:degrees is degrees-.001
+		on click:lose 0.1 degrees 
 		cost:200000 dollars
-		limit:100
+		//limit:100
 		cost increase:150%
 		
 	*antminer|antminer
@@ -180,6 +185,17 @@ Buildings
 		on tick:degrees is degrees+.09
 		req:10 bitcoins:earned
 		tag:miner
+
+	*carbonCapturePlant|carbonCapturePlants
+		name:Carbon Capture Plant|Carbon Capture Plants
+		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
+		icon:icons[10,0]
+		on tick:degrees is degrees-.001 
+		cost:500000 dollars
+		limit:100
+		cost increase:150%
+		show max
+		
 		
 	*socialmedia|socialmedia
 		name:Social Media|Social Media
@@ -198,6 +214,7 @@ Buildings
 		req:7000000 dollars:earned
 		limit:10
 		cost increase:105%
+		show max
 	
 	*president|president
 		name:President|Presidents
@@ -205,6 +222,7 @@ Buildings
 		icon:icons[12,0]
 		cost:900000 dollars, 500 bitcoins
 		limit:1
+		show max
 
 	*sunShade|sunShades
 		name:Solar Dimming Array Launch| Solar Dimming Array Launch
@@ -216,6 +234,7 @@ Buildings
 		cost increase:99.5%
 		//on tick:yield -0.008 degrees
 		on tick:degrees is degrees-.008
+		show max
 
 
 Upgrades
