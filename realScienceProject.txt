@@ -113,7 +113,7 @@ Buildings
 		name:CEO|CEOs
 		desc:The top of the ladder, congratulations. Try not to get arrested for corporate fraud.<//><b>Effect:</b><.>Produces 100000 dollars per second.
 		icon:icons[9,0]
-		cost:7000000 dollars, 100 bitcoins
+		cost:3000000 dollars, 75 bitcoins
 		on tick:yield 100000 dollars
 		req:7000000 dollars:earned
 		limit:10
