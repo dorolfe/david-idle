@@ -313,12 +313,14 @@ Upgrades
 		desc:Teaching your workers how to do their job better.<//><b>Effect:</b><.>Doubles employee efficiency! 
 		req:employee>9
 		passive:multiply yield of employee by 2
+		passive:multiply yield of dollarButton by 7
 		cost:15000 dollars
 
 	*MBA
 		name:MBA
 		desc:Masters in Business Administration.<//><b>Effect:</b><.>Doubles manager efficiency!
 		passive:multiply yield of manager by 2
+		passive:multiply yield of dollarButton by 8
 		req:onJobTraining
 		req:manager
 		cost:60000 dollars
@@ -330,6 +332,7 @@ Upgrades
 		req:manager
 		req:CEO
 		passive:multiply yield of CEO by 2
+		passive:multiply yield of dollarButton by 10
 		cost:200000 dollars, 50 employee
 
 Achievements
