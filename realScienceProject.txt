@@ -151,9 +151,9 @@ Buildings
 	*cloudSeeding
 		name:Cloud seeding flight
 		desc:Launch a plane to spread reflective dust at very high altitude.<//><b>Effect:</b><.>Increases cloud cover, clouds reflect sunlight into space.<.>Cools the planet.
-		icon:icons[10,0]
+		icon:icons[14,0]
 		on tick:degrees is degrees-.001
-		on click:lose 0.1 degrees 
+		on click:degrees is degrees-0.1 
 		cost:200000 dollars
 		//limit:100
 		cost increase:150%
