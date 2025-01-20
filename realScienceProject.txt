@@ -83,6 +83,7 @@ Buildings
 		icon:icons[9,0]
 		unlocked
 
+// ---------- labor
 
 	*mouse|mice
 		name:Mouse|Mice
@@ -92,37 +93,6 @@ Buildings
 		on tick:yield 5 dollar
 		unlocked
 
-
-	*sponsorship|sponsorships
-		name:Sponsorship|Sponsorships
-		desc:Turns out you can turn a profit by promoting products.<//><b>Effect:</b><.>Produces 150 dollars every 1 seconds.
-		icon:icons[1,0]
-		cost:1000 dollars
-		on tick:yield 150 dollars
-		req:150 dollars:earned
-
-
-	*airConditioningUnit|airConditioningUnits
-		name:AC Unit|AC Units
-		desc:Improve your climate at home. <//><b>Effect:</b><.>Cools your temperature by 0.0001 per second.<.>Max of 10
-		icon:icons[11,0]
-		cost:1000 dollars
-		on tick:degrees is degrees-.0004
-		on tick:yield .0004 cooling
-		limit:10
-		req:71 degrees
-		show max
-
-	*bitcoinminer|bitcoinminers
-		name:Bitcoin Miner|Bitcoin Miners
-		desc:This is legal... right?<//><b>Effect:</b><.>Produces .01 Bitcoins per 1 seconds and increases warming.
-		icon:icons[2,0]
-		cost:1000 dollars
-		on tick:yield 0.01 bitcoins
-		on tick:degrees is degrees+.01
-		req:500 dollars:earned
-		tag:miner
-
 	*employee|employee
 		name:Employee|Employees
 		desc:Turns out working for someone makes decent money. Now to start climbing the corporate ladder and arguing with your manager.<//><b>Effect:</b><.>Produces 500 dollars per second.
@@ -130,38 +100,7 @@ Buildings
 		cost:2500 dollars
 		on tick:yield 500 dollars
 		req:2500 dollars:earned
-	
-	*shopify|shopify
-		name:Shopify|Shopify
-		desc:Start an online business.<//><b>Effect:</b><.>Produces 1000 dollars per second.
-		icon:icons[4,0]
-		cost:7500 dollars
-		on tick:yield 1000 dollars
-		req:7500 dollars:earned
 
-	*cloudSeeding
-		name:Cloud seeding flight
-		desc:Launch a plane to spread reflective dust at very high altitude.<//><b>Effect:</b><.>Increases cloud cover, clouds reflect sunlight into space.<.>Cools the planet.<.>Strong immediate effect, but weak over time.
-		icon:icons[14,0]
-		on tick:degrees is degrees-.002
-		on tick:yield .002 cooling
-		on click:degrees is degrees-0.2 
-		on click:yield 0.2 cooling
-		cost:200000 dollars
-		//limit:100
-		cost increase:110%
-		req:10 airConditioningUnits
-
-	*antminer|antminer
-		name:Antminer
-		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.05 bitcoins every second and increases warming.
-		icon:icons[5,0]
-		cost:50000 dollars, 5 bitcoins
-		on tick:if (have bitcoinminer) yield 0.05 bitcoins
-		on tick:degrees is degrees+.03
-		req:1 bitcoins:earned
-		tag:miner
-		
 	*manager|manager
 		name:Manager|Manager
 		desc:The second level of the corporate ladder. You have become your own worst enemy.<//><b>Effect:</b><.>Produces 5000 dollars per second.
@@ -169,38 +108,7 @@ Buildings
 		cost:100000 dollars
 		on tick:yield 5000 dollars
 		req:100000 dollars:earned
-
-	*sealminer
-		name:SealMiner
-		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.5 bitcoins per second and increases warming.
-		icon:icons[7,0]
-		cost:150000 dollars, 10 bitcoins
-		on tick:if (have antminer) yield 0.5 bitcoins
-		on tick:degrees is degrees+.09
-		req:10 bitcoins:earned
-		tag:miner
-
-	*carbonCapturePlant|carbonCapturePlants
-		name:Carbon Capture Plant|Carbon Capture Plants
-		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
-		icon:icons[10,0]
-		on tick:degrees is degrees-.001 
-		on tick:yield 0.001 cooling 
-		cost:500000 dollars
-		limit:100
-		cost increase:125%
-		req:10 airConditioningUnits
-		req:cloudSeeding
-		show max
-		
-	*socialmedia|socialmedia
-		name:Social Media|Social Media
-		desc:Start spreading your popularity through the wide world of web.<//><b>Effect:</b><.>Produces 50000 dollars per second.
-		icon:icons[8,0]
-		cost:3000000 dollars, 15 bitcoins
-		on tick:yield 50000 dollars
-		req:30000000 dollars:earned
-		
+				
 	*CEO|CEOs
 		name:CEO|CEOs
 		desc:The top of the ladder, congratulations. Try not to get arrested for corporate fraud.<//><b>Effect:</b><.>Produces 100000 dollars per second.
@@ -216,7 +124,7 @@ Buildings
 		name:President|Presidents
 		desc:You are the commander of the world now. <//><i>Congratulations.</i>
 		icon:icons[12,0]
-		cost:900000 dollars, 500 bitcoins
+		cost:900000 dollars, 350 bitcoins
 		limit:1
 		show max
 
@@ -230,6 +138,106 @@ Buildings
 		limit:1
 		show max
 
+
+
+
+
+// -------- mining
+
+	*bitcoinminer|bitcoinminers
+		name:Bitcoin Miner|Bitcoin Miners
+		desc:This is legal... right?<//><b>Effect:</b><.>Produces .01 Bitcoins per 1 seconds and increases warming.
+		icon:icons[2,0]
+		cost:1000 dollars
+		on tick:yield 0.01 bitcoins
+		on tick:degrees is degrees+.01
+		req:500 dollars:earned
+		tag:miner
+	*antminer|antminer
+		name:Antminer
+		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.05 bitcoins every second and increases warming.
+		icon:icons[5,0]
+		cost:50000 dollars, 5 bitcoins
+		on tick:if (have bitcoinminer) yield 0.05 bitcoins
+		on tick:degrees is degrees+.03
+		req:1 bitcoins:earned
+		tag:miner
+	*sealminer
+		name:SealMiner
+		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.5 bitcoins per second and increases warming.
+		icon:icons[7,0]
+		cost:150000 dollars, 10 bitcoins
+		on tick:if (have antminer) yield 0.5 bitcoins
+		on tick:degrees is degrees+.09
+		req:10 bitcoins:earned
+		tag:miner
+
+
+
+//------ e-commerce
+
+	*sponsorship|sponsorships
+		name:Sponsorship|Sponsorships
+		desc:Turns out you can turn a profit by promoting products.<//><b>Effect:</b><.>Produces 150 dollars every 1 seconds.
+		icon:icons[1,0]
+		cost:1000 dollars
+		on tick:yield 150 dollars
+		req:150 dollars:earned	
+	*shopify|shopify
+		name:Shopify|Shopify
+		desc:Start an online business.<//><b>Effect:</b><.>Produces 1000 dollars per second.
+		icon:icons[4,0]
+		cost:7500 dollars
+		on tick:yield 1000 dollars
+		req:7500 dollars:earned
+	*socialmedia|socialmedia
+		name:Social Media|Social Media
+		desc:Start spreading your popularity through the wide world of web.<//><b>Effect:</b><.>Produces 50000 dollars per second.
+		icon:icons[8,0]
+		cost:3000000 dollars, 15 bitcoins
+		on tick:yield 50000 dollars
+		req:30000000 dollars:earned
+
+
+//-------- cooling
+
+	*airConditioningUnit|airConditioningUnits
+		name:AC Unit|AC Units
+		desc:Improve your climate at home. <//><b>Effect:</b><.>Cools your temperature by 0.0001 per second.<.>Max of 10
+		icon:icons[11,0]
+		cost:1000 dollars
+		on tick:degrees is degrees-.0006
+		on tick:yield .0006 cooling
+		limit:10
+		req:71 degrees
+		show max
+
+	*cloudSeeding
+		name:Cloud seeding flight
+		desc:Launch a plane to spread reflective dust at very high altitude.<//><b>Effect:</b><.>Increases cloud cover, clouds reflect sunlight into space.<.>Cools the planet.<.>Strong immediate effect, but weak over time.
+		icon:icons[14,0]
+		on tick:degrees is degrees-.002
+		on tick:yield .002 cooling
+		on click:degrees is degrees-0.2 
+		on click:yield 0.2 cooling
+		cost:200000 dollars
+		//limit:100
+		cost increase:110%
+		req:10 airConditioningUnits
+
+	*carbonCapturePlant|carbonCapturePlants
+		name:Carbon Capture Plant|Carbon Capture Plants
+		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
+		icon:icons[10,0]
+		on tick:degrees is degrees-.002 
+		on tick:yield 0.002 cooling 
+		cost:500000 dollars
+		limit:100
+		cost increase:125%
+		req:10 airConditioningUnits
+		req:cloudSeeding
+		show max
+
 	*sunShade|sunShades
 		name:Solar Dimming Array Launch| Solar Dimming Array Launch
 		desc:Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
@@ -237,8 +245,9 @@ Buildings
 		req:president=1
 		cost:100000000 dollars
 		limit:500
-		cost increase:99.5%
+		cost increase:99.6%
 		on tick:degrees is degrees-.008
+		on tick:yields .01 cooling
 		show max
 
 
