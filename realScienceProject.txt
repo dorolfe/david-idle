@@ -261,12 +261,14 @@ Upgrades
 		desc:Feels frictionless eh?<//><b>Effect:</b><.>Faster mice earn dollars faster.
 		req:autoclicker 
 		passive:multiply yield of mouse by 1.05
+		cost:200 dollars
 
 	*mousePad
 		name:Charging Mouse Pad
 		desc:Now your mouse can be wireless<//><b>Effect:</b><.>Convenient mice earn dollars faster.
 		req:lightMouse
 		passive:multiply yield of mouse by 1.1
+		cost:300 dollars
 
 	*fasterPC
 		name:Faster Computer
@@ -274,26 +276,34 @@ Upgrades
 		passive:multiply yield of dollarButton by 2
 		cost:100 dollars
 
+	*evenFasterPC
+		name:Even Faster Computer
+		desc:Get even more work done with every click!<//><b>Effect:</b><.>Increases click value by 300%
+		passive:multiply yield of dollarButton by 3
+		cost:1000 dollars
+
 
 	*multiMonitor
 		name:Multi Monitor Setup
 		desc:I can see the multiverse...<//><b>Effect:</b><.>Further increases click value.
 		req:fasterPC
 		passive:multiply yield of dollarButton by 6
+		cost:2000 dollars
 
 	*solarRoof
 		name:Solar Roof
 		desc:By using renewable power... <//><b>Effect:</b><.>Increases output of Bitcoin miners without increasing warming.
 		passive:multiply yield of tag:miner by 1.1
-		cost:100 dollars
+		cost:1000 dollars, 2 bitcoin
 		req:bitcoinminer
 
 
 	*greenRoof
 		name:Green Roof
-		desc:Plants on the rooftops cool the nearby air.<//><b>Effect:</b><.>Increases output of Bitcoin miners without increasing warming.
+		desc:Plants on the rooftops cool the nearby air.<//><b>Effect:</b><.>Increases output of Bitcoin miners without increasing warming.<.>I don't know why the installers get paid in bitcoins.
 		req:antminer
 		passive:multiply yield of tag:miner by 1.1
+		cost:2000 dollars, 3 bitcoin
 
 
 
