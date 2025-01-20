@@ -75,7 +75,7 @@ Resources
 	*degree|degrees
 		name:Temperature
 		desc:Don't let this get too high or wildfires will burn down all your progress!
-		on tick:yield .05 degrees
+		on tick:yield .025 degrees
 		start with:70 degrees
 	//ideas:Reforestation, solar dimming array, carbon capture
 		
@@ -238,9 +238,7 @@ Buildings
 
 
 Upgrades
-
 //ideas: Green roof, solar roof, reforestation
-
 	*autoclicker
 		name:Auto Clicker
 		desc:Why waste your time clicking manually to make money?<//><b>Effect:</b><.>Clicks the mouse for $1 per second.
@@ -281,7 +279,8 @@ Achievements
 
 	*badAchievement2
 		name:You Died!
-		desc:The temperature got too hot and life could not survive. Humans have been forced to evacuate 1,000 feet underground.
+		desc:The temperature got too hot and life could not survive. Underground colonies collapse as sea-level rises.
 		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
+		on earn:lose 1000000000000 dollars
 		req:degrees>130
 		
