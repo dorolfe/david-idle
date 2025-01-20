@@ -226,7 +226,7 @@ Buildings
 
 	*IRS
 		name:IRS
-		desc: Now that you are the president you can ensure everyone pays their taxes.<//><b>Effect:</b><.>Greatly increases internal revenue.
+		desc:Now that you are the president you can ensure everyone pays their taxes.<//><b>Effect:</b><.>Greatly increases internal revenue.
 		cost:25000000
 		on tick:yield 500000 dollars
 		icon:https://dorolfe.github.io/david-idle/IRS.png
@@ -247,7 +247,7 @@ Buildings
 
 
 Upgrades
-//ideas: Green roof, solar roof, reforestation
+//ideas  reforestation
 	*autoclicker
 		name:Auto Clicker
 		desc:Why waste your time clicking manually to make money?<//><b>Effect:</b><.>Clicks the mouse for $1 per second.
@@ -258,15 +258,15 @@ Upgrades
 
 	*lightMouse
 		name:Super Light Mouse
-		desc: feels frictionless eh?<//><b>Effect:</b><.>Faster mice earn dollars faster.
+		desc:Feels frictionless eh?<//><b>Effect:</b><.>Faster mice earn dollars faster.
 		req:autoclicker 
-		passive: multiply yield of mouse by 1.05
+		passive:multiply yield of mouse by 1.05
 
 	*mousePad
 		name:Charging Mouse Pad
 		desc:Now your mouse can be wireless<//><b>Effect:</b><.>Convenient mice earn dollars faster.
 		req:lightMouse
-		passive: multiply yield of mouse by 1.1
+		passive:multiply yield of mouse by 1.1
 
 	*fasterPC
 		name:Faster Computer
@@ -277,7 +277,7 @@ Upgrades
 
 	*multiMonitor
 		name:Multi Monitor Setup
-		desc: I can see the multiverse...<//><b>Effect:</b><.>Further increases click value.
+		desc:I can see the multiverse...<//><b>Effect:</b><.>Further increases click value.
 		req:fasterPC
 		passive:multiply yield of dollarButton by 6
 
@@ -313,7 +313,7 @@ Achievements
 		desc:If it gets too cold farms can't produce enough food. Everyone's dead.
 		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
 		req:degrees<50
-		on tick: dollars is 0
+		on tick:dollars is 0
 
 	*badAchievement2
 		name:You Died!
@@ -321,7 +321,7 @@ Achievements
 		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
 		on earn:lose 1000000000000 dollars
 		req:degrees>130
-		on tick: dollars is 0
+		on tick:dollars is 0
 
 	*unkillable
 		name:Unkillable
