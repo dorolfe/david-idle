@@ -245,7 +245,7 @@ Buildings
 		desc:Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
 		icon:icons[13,0]
 		req:president=1
-		cost:750000000 dollars
+		cost:75000000 dollars
 		limit:500
 		cost increase:99.6%
 		on tick:degrees is degrees-.01
