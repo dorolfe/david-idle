@@ -344,10 +344,10 @@ Achievements
 		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
 		req:degrees>130
 		on earn:lose 1000000000000 dollars
-		on earn:lose employees
-		on earn:lose managers
-		on earn:lose CEOs
-		on earn:lose president
+		on earn:employees is 0
+		on earn:managers is 0 
+		on earn:CEOs is 0 
+		on earn:president is 0
 		on earn:dollars is 0
 		on tick:dollars is 0
 		on tick:dollars is dollars-1000000000000000
