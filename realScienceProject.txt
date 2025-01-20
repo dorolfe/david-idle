@@ -58,8 +58,8 @@ Resources
 	*degree|degrees
 		name:Temperature
 		desc:Don't let this get too high or wildfires will burn down all your progress!
-		on tick:yield .025 degrees
-		start with:70 degrees
+		on tick:yield .023 degrees
+		start with:65 degrees
 		can be negative
 
 	*cooling
