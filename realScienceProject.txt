@@ -151,6 +151,7 @@ Buildings
 		on tick:degrees is degrees+.01
 		req:500 dollars:earned
 		tag:miner
+
 	*antminer|antminer
 		name:Antminer
 		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.05 bitcoins every second and increases warming.
@@ -160,6 +161,7 @@ Buildings
 		on tick:degrees is degrees+.03
 		req:1 bitcoins:earned
 		tag:miner
+
 	*sealminer
 		name:SealMiner
 		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.5 bitcoins per second and increases warming.
@@ -181,6 +183,7 @@ Buildings
 		cost:1000 dollars
 		on tick:yield 150 dollars
 		req:150 dollars:earned	
+
 	*shopify|shopify
 		name:Shopify|Shopify
 		desc:Start an online business.<//><b>Effect:</b><.>Produces 1000 dollars per second.
@@ -188,6 +191,7 @@ Buildings
 		cost:7500 dollars
 		on tick:yield 1000 dollars
 		req:7500 dollars:earned
+
 	*socialmedia|socialmedia
 		name:Social Media|Social Media
 		desc:Start spreading your popularity through the wide world of web.<//><b>Effect:</b><.>Produces 50000 dollars per second.
@@ -209,6 +213,7 @@ Buildings
 		limit:10
 		req:71 degrees
 		show max
+
 	*cloudSeeding
 		name:Cloud seeding flight
 		desc:Launch a plane to spread reflective dust at very high altitude.<//><b>Effect:</b><.>Increases cloud cover, clouds reflect sunlight into space.<.>Cools the planet.<.>Strong immediate effect, but weak over time.
@@ -221,6 +226,7 @@ Buildings
 		//limit:100
 		cost increase:110%
 		req:10 airConditioningUnits
+
 	*carbonCapturePlant|carbonCapturePlants
 		name:Carbon Capture Plant|Carbon Capture Plants
 		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
@@ -233,6 +239,7 @@ Buildings
 		req:10 airConditioningUnits
 		req:cloudSeeding
 		show max
+
 	*sunShade|sunShades
 		name:Solar Dimming Array Launch| Solar Dimming Array Launch
 		desc:Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
@@ -291,6 +298,15 @@ Upgrades
 		desc:I can see the multiverse...<//><b>Effect:</b><.>Further increases click value.
 		req:fasterPC
 		passive:multiply yield of dollarButton by 6
+		cost:2000 dollars
+
+	*betterHelpers
+		name:Better Helpers
+		desc:You're advertising more than mattresses and that one same game.<//><b>Effect:</b><.>Improves social media by 2.<.>Improves sponsorships by 4.
+		req:fasterPC
+		req:sponsorships>25
+		passive:multiply yield of socialmedia by 2
+		passive:multiply yield of sponsorship by 4
 		cost:2000 dollars
 
 	*solarRoof
@@ -389,3 +405,8 @@ Achievements
 		name:Stop hacking bum!
 		desc:Make 100 trillion dollars without dying
 		req:100000000000000 dollars:earned
+
+	*seedAchievement
+		name:31 Mile High Club
+		desc:Your ace pilots have made 31 flights into the stratosphere!
+		req:cloudSeeding>30
