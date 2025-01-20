@@ -193,7 +193,8 @@ Buildings
 		on tick:degrees is degrees-.001 
 		cost:500000 dollars
 		limit:100
-		cost increase:150%
+		cost increase:125%
+		req:10 airConditioningUnits
 		show max
 		
 		
@@ -305,7 +306,29 @@ Upgrades
 		passive:multiply yield of tag:miner by 1.1
 		cost:2000 dollars, 3 bitcoin
 
+	*onJobTraining
+		name:On Job Training
+		desc:Teaching your workers how to do their job better 
+		req:employee>9
+		passive:multiply yield of employee by 2
+		cost:15000 dollars
 
+	*MBA
+		name:MBA
+		desc:Masters in Buisness Administration.
+		passive:multiply yield of manager by 2
+		req:onJobTraining
+		req:manager
+		cost:60000 dollars
+
+	*goldenParachute
+		name: Golden Parachute
+		desc: A backup plan for if all your Employees hate you enough to kick you out.
+		req:employee>50
+		req:manager
+		req:CEO
+		passive: multiply yield of CEO by 2
+		cost:200000 dollars, 50 employee
 
 Achievements
 
@@ -324,6 +347,7 @@ Achievements
 		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
 		req:degrees<50
 		on tick:dollars is 0
+		on tick:dollars is dollars-1000000000000000
 
 	*badAchievement2
 		name:You Died!
@@ -331,7 +355,8 @@ Achievements
 		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
 		on earn:lose 1000000000000 dollars
 		req:degrees>130
-		on tick:dollars is 0
+		on tick:dollars is 0 
+		on tick:dollars is dollars-1000000000000000
 
 	*unkillable
 		name:Unkillable
