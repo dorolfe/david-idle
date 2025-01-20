@@ -308,26 +308,26 @@ Upgrades
 
 	*onJobTraining
 		name:On Job Training
-		desc:Teaching your workers how to do their job better 
+		desc:Teaching your workers how to do their job better.<//><b>Effect:</b><.>Doubles employee efficiency! 
 		req:employee>9
 		passive:multiply yield of employee by 2
 		cost:15000 dollars
 
 	*MBA
 		name:MBA
-		desc:Masters in Buisness Administration.
+		desc:Masters in Business Administration.<//><b>Effect:</b><.>Doubles manager efficiency!
 		passive:multiply yield of manager by 2
 		req:onJobTraining
 		req:manager
 		cost:60000 dollars
 
 	*goldenParachute
-		name: Golden Parachute
-		desc: A backup plan for if all your Employees hate you enough to kick you out.
+		name:Golden Parachute
+		desc:A backup plan for if all your employees hate you enough to kick you out.<//><b>Effect:</b><.>Doubles CEO efficiency!
 		req:employee>50
 		req:manager
 		req:CEO
-		passive: multiply yield of CEO by 2
+		passive:multiply yield of CEO by 2
 		cost:200000 dollars, 50 employee
 
 Achievements
