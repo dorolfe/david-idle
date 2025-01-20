@@ -85,7 +85,7 @@ Buildings
 
 	*mouse|mice
 		name:Mouse|Mice
-		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 5 dollar every 1 seconds.
+		desc:More clicks more money. (don't ask how that works).<//><b>Effect:</b><.>Produces 5 dollars every 1 seconds.
 		icon:icons[0,0]
 		cost:50 dollars
 		on tick:yield 5 dollar
@@ -129,7 +129,7 @@ Buildings
 	*IRS
 		name:IRS
 		desc:Now that you are the president you can ensure everyone pays their taxes.<//><b>Effect:</b><.>Greatly increases internal revenue.
-		cost:25000000
+		cost:25000000 dollars
 		on tick:yield 500000 dollars
 		icon:https://dorolfe.github.io/david-idle/IRS.png
 		req:president=1
@@ -245,7 +245,7 @@ Buildings
 		desc:Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
 		icon:icons[13,0]
 		req:president=1
-		cost:100000000 dollars
+		cost:750000000 dollars
 		limit:500
 		cost increase:99.6%
 		on tick:degrees is degrees-.01
@@ -308,6 +308,16 @@ Upgrades
 		passive:multiply yield of socialmedia by 2
 		passive:multiply yield of sponsorship by 4
 		cost:2000 dollars
+
+	*superFans
+		name:Super Fans
+		desc:Super fans will do anything to prove their loyalty, like buy your merch and visit your sponsors.<//><b>Effect:</b><.>Improves social media by 4.<.>Improves sponsorships by 2.
+		req:fasterPC
+		req:sponsorships>10
+		req:socialmedia>3
+		passive:multiply yield of socialmedia by 4
+		passive:multiply yield of sponsorship by 2
+		cost:4000 dollars
 
 	*solarRoof
 		name:Solar Roof
