@@ -157,7 +157,8 @@ Buildings
 		cost:200000 dollars
 		//limit:100
 		cost increase:150%
-		
+		req:10 airConditioningUnits
+
 	*antminer|antminer
 		name:Antminer
 		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.02 bitcoins every second.
@@ -195,6 +196,7 @@ Buildings
 		limit:100
 		cost increase:125%
 		req:10 airConditioningUnits
+		req:cloudSeeding
 		show max
 		
 		
