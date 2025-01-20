@@ -113,7 +113,7 @@ Buildings
 		icon:icons[9,0]
 		cost:3000000 dollars, 75 bitcoins
 		on tick:yield 100000 dollars
-		req:7000000 dollars:earned
+		req:6100000 dollars:earned
 		limit:10
 		cost increase:105%
 		show max
@@ -147,7 +147,7 @@ Buildings
 		desc:This is legal... right?<//><b>Effect:</b><.>Produces .01 Bitcoins per 1 seconds and increases warming.
 		icon:icons[2,0]
 		cost:1000 dollars
-		on tick:yield 0.01 bitcoins
+		on tick:yield 0.015 bitcoins
 		on tick:degrees is degrees+.01
 		req:500 dollars:earned
 		tag:miner
