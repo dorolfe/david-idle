@@ -335,6 +335,7 @@ Achievements
 		desc:If it gets too cold farms can't produce enough food. Everyone's dead.
 		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
 		req:degrees<50
+		on earn:dollars is 0
 		on tick:dollars is 0
 		on tick:dollars is dollars-1000000000000000
 
@@ -344,10 +345,6 @@ Achievements
 		icon:https://dorolfe.github.io/david-idle/youDiedButton.png
 		req:degrees>130
 		on earn:lose 1000000000000 dollars
-		on earn:employees is 0
-		on earn:managers is 0 
-		on earn:CEOs is 0 
-		on earn:president is 0
 		on earn:dollars is 0
 		on tick:dollars is 0
 		on tick:dollars is dollars-1000000000000000
