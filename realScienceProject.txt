@@ -15,7 +15,7 @@ Settings
 
 Layout
 	use default
-	header:<b>The year is 2125, and your job is to make as much money as possible. Click the dollar to begin.</b><//><//>Available upgrades:
+	header:<b>The year is 2125, and your job is to make as much money as possible. Click the dollar to begin.</b><//></>Available upgrades:
 	
 	
 
@@ -63,6 +63,11 @@ Resources
 		on tick:yield .025 degrees
 		start with:70 degrees
 		can be negative
+
+	*cooling
+		name:Cooling
+		desc:Cumulative cooling from geo-engineering efforts.
+		req:cloudSeeding
 		
 Buildings
 	*TEMPLATE
@@ -103,13 +108,14 @@ Buildings
 		icon:icons[11,0]
 		cost:1000 dollars
 		on tick:degrees is degrees-.0004
+		on tick:yield .0004 cooling
 		limit:10
 		req:71 degrees
 		show max
 
 	*bitcoinminer|bitcoinminers
 		name:Bitcoin Miner|Bitcoin Miners
-		desc:This is legal... right?<//><b>Effect:</b><.>Produces .01 Bitcoins per 1 seconds and .0002 degrees.
+		desc:This is legal... right?<//><b>Effect:</b><.>Produces .01 Bitcoins per 1 seconds and increases warming.
 		icon:icons[2,0]
 		cost:1000 dollars
 		on tick:yield 0.01 bitcoins
@@ -138,7 +144,9 @@ Buildings
 		desc:Launch a plane to spread reflective dust at very high altitude.<//><b>Effect:</b><.>Increases cloud cover, clouds reflect sunlight into space.<.>Cools the planet.<.>Strong immediate effect, but weak over time.
 		icon:icons[14,0]
 		on tick:degrees is degrees-.002
+		on tick:yield .002 cooling
 		on click:degrees is degrees-0.2 
+		on click:yield 0.2 cooling
 		cost:200000 dollars
 		//limit:100
 		cost increase:110%
@@ -146,7 +154,7 @@ Buildings
 
 	*antminer|antminer
 		name:Antminer
-		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.02 bitcoins every second.
+		desc:A new very expensive way to mine bitcoin better.<//><b>Effect:</b><.>Produces 0.05 bitcoins every second and increases warming.
 		icon:icons[5,0]
 		cost:50000 dollars, 5 bitcoins
 		on tick:if (have bitcoinminer) yield 0.05 bitcoins
@@ -162,9 +170,9 @@ Buildings
 		on tick:yield 5000 dollars
 		req:100000 dollars:earned
 
-	*antminers21|antminers21
+	*sealminer
 		name:SealMiner
-		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.1 bitcoins per second.
+		desc:Probably the best way to mine bitcoin.<//><b>Effect:</b><.>Produces 0.5 bitcoins per second and increases warming.
 		icon:icons[7,0]
 		cost:150000 dollars, 10 bitcoins
 		on tick:if (have antminer) yield 0.5 bitcoins
@@ -177,13 +185,13 @@ Buildings
 		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
 		icon:icons[10,0]
 		on tick:degrees is degrees-.001 
+		on tick:yield 0.001 cooling 
 		cost:500000 dollars
 		limit:100
 		cost increase:125%
 		req:10 airConditioningUnits
 		req:cloudSeeding
 		show max
-		
 		
 	*socialmedia|socialmedia
 		name:Social Media|Social Media
