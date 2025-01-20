@@ -311,11 +311,12 @@ Upgrades
 
 	*superFans
 		name:Super Fans
-		desc:Super fans will do anything to prove their loyalty, like buy your merch and visit your sponsors.<//><b>Effect:</b><.>Improves social media by 4.<.>Improves sponsorships by 2.
+		desc:Super fans will do anything to prove their loyalty, like buy your merch and visit your sponsors.<//><b>Effect:</b><.>Improves social media and Shopify by 4.<.>Improves sponsorships by 2.
 		req:fasterPC
 		req:sponsorships>10
 		req:socialmedia>3
 		passive:multiply yield of socialmedia by 4
+		passive:multiply yield of shopify by 4
 		passive:multiply yield of sponsorship by 2
 		cost:4000 dollars
 
