@@ -258,7 +258,7 @@ Upgrades
 	*autoclicker
 		name:Auto Clicker
 		desc:Why waste your time clicking manually to make money?<//><b>Effect:</b><.>Clicks the mouse for $1 per second.
-		passive:yield 1 dollar
+		passive:multiply yield of mouse by 1.05
 		on tick:yield 1 dollar
 		cost:100 dollars
 		req:mouse
@@ -267,14 +267,14 @@ Upgrades
 		name:Super Light Mouse
 		desc:Feels frictionless eh?<//><b>Effect:</b><.>Faster mice earn dollars faster.
 		req:autoclicker 
-		passive:multiply yield of mouse by 1.05
+		passive:multiply yield of mouse by 1.1
 		cost:200 dollars
 
 	*mousePad
 		name:Charging Mouse Pad
 		desc:Now your mouse can be wireless<//><b>Effect:</b><.>Convenient mice earn dollars faster.
 		req:lightMouse
-		passive:multiply yield of mouse by 1.1
+		passive:multiply yield of mouse by 1.2
 		cost:300 dollars
 
 	*fasterPC
