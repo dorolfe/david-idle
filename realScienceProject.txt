@@ -1,7 +1,7 @@
 Let's make a game!
 	name:Science Project
 	by:Owen Rolfe
-	desc:My science project/idle clicker game. Simulating life 100 years in the future and trying to become the richest man on earth<//>Make money you capitalist.
+	desc:My science project/idle clicker game. Simulating life 100 years in the future and trying to become the richest man on earth<//>Keep in mind this game is still in development...
 	created:01/11/2024
 	updated:01/11/2024
 	version:1.1
@@ -33,8 +33,6 @@ Buttons
 		tooltip class:red
 		req:degrees>50
 		req:degrees<130
-
-
 
 		/*
 		nuclear strike
