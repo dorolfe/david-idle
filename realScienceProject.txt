@@ -15,8 +15,9 @@ Settings
 
 Layout
 	use default
-	header:This is the header text
-	footer:This is the footer text
+	header:<b>The year is 2125, and your job is to make as much money as possible. Click the dollar to begin.</b><//><//>Available upgrades:
+	
+	
 
 Buttons
 	*dollarButton
