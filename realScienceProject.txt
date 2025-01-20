@@ -342,8 +342,8 @@ Upgrades
 		req:sealminer>5
 		req:1000000000 dollars:earned
 		passive:multiply yield of tag:miner by 1.1
-		passive:degrees is degrees-0.5
-		passive:yield cooling 0.5
+		passive:degrees is degrees-(sealminer*0.1)
+		passive:yield (sealminer*0.1) cooling
 		cost:200000 dollars
 
 	*onJobTraining
