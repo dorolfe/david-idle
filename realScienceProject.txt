@@ -24,7 +24,7 @@ Buttons
 		name:Make a dollar
 		desc:Click this dollar to make more money.
 		on click:anim icon wobble
-		on click:yield 1 dollar
+		on click:yield random(1,3) dollar
 		icon:https://dorolfe.github.io/david-idle/Dollar.png
 		no text
 		class:bigButton hasFlares
