@@ -275,13 +275,16 @@ Upgrades
 		name:Faster Computer
 		desc:Get more work done with every click!<//><b>Effect:</b><.>Increases click value by 100%
 		passive:multiply yield of dollarButton by 2
-		cost:100 dollars
+		cost:200 dollars
+		req:mouse
+		req:250 dollars:earned
 
 	*evenFasterPC
 		name:Even Faster Computer
 		desc:Get even more work done with every click!<//><b>Effect:</b><.>Increases click value by 300%
 		passive:multiply yield of dollarButton by 3
 		cost:1000 dollars
+		req:fasterPC
 
 
 	*multiMonitor
@@ -323,7 +326,7 @@ Upgrades
 
 	*goldenParachute
 		name:Golden Parachute
-		desc:A backup plan for if all your employees hate you enough to kick you out.<//><b>Effect:</b><.>Doubles CEO efficiency!
+		desc:A backup plan for if all your employees hate you enough to kick you out.<//><b>Effect:</b><.>Doubles CEO efficiency!<.>Comes at the cost of employees salaries.
 		req:employee>50
 		req:manager
 		req:CEO
