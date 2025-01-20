@@ -211,7 +211,6 @@ Buildings
 		limit:10
 		req:71 degrees
 		show max
-
 	*cloudSeeding
 		name:Cloud seeding flight
 		desc:Launch a plane to spread reflective dust at very high altitude.<//><b>Effect:</b><.>Increases cloud cover, clouds reflect sunlight into space.<.>Cools the planet.<.>Strong immediate effect, but weak over time.
@@ -224,7 +223,6 @@ Buildings
 		//limit:100
 		cost increase:110%
 		req:10 airConditioningUnits
-
 	*carbonCapturePlant|carbonCapturePlants
 		name:Carbon Capture Plant|Carbon Capture Plants
 		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
@@ -237,7 +235,6 @@ Buildings
 		req:10 airConditioningUnits
 		req:cloudSeeding
 		show max
-
 	*sunShade|sunShades
 		name:Solar Dimming Array Launch| Solar Dimming Array Launch
 		desc:Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
@@ -246,8 +243,8 @@ Buildings
 		cost:100000000 dollars
 		limit:500
 		cost increase:99.6%
-		on tick:degrees is degrees-.008
-		on tick:yields .01 cooling
+		on tick:degrees is degrees-.01
+		on tick:yield .01 cooling
 		show max
 
 
