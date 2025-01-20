@@ -241,7 +241,7 @@ Buildings
 		show max
 
 	*sunShade|sunShades
-		name:Solar Dimming Array Launch| Solar Dimming Array Launch
+		name:Solar Dimming Launch
 		desc:Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
 		icon:icons[13,0]
 		req:president=1
