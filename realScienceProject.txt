@@ -99,8 +99,8 @@ Buildings
 		on tick:yield 500 dollars
 		req:2500 dollars:earned
 
-	*manager|manager
-		name:Manager|Manager
+	*manager|managers
+		name:Manager|Managers
 		desc:The second level of the corporate ladder. You have become your own worst enemy.<//><b>Effect:</b><.>Produces 5000 dollars per second.
 		icon:icons[6,0]
 		cost:100000 dollars
@@ -245,11 +245,12 @@ Buildings
 		desc:Launch a part of a solar dimming satellite array, to reflect sunlight away from Earth.<//><b>Effect:</b><.>Cools the planet.
 		icon:icons[13,0]
 		req:president=1
-		cost:75000000 dollars
+		cost:65000000 dollars
 		limit:500
-		cost increase:99.6%
+		cost increase:99.5%
 		on tick:degrees is degrees-.01
 		on tick:yield .01 cooling
+		on click:degrees is degrees-1
 		show max
 
 
@@ -297,6 +298,25 @@ Upgrades
 		name:Multi Monitor Setup
 		desc:I can see the multiverse...<//><b>Effect:</b><.>Further increases click value.
 		req:fasterPC
+		passive:multiply yield of dollarButton by 6
+		cost:2000 dollars
+
+	*extraMice
+		name:Too many mice
+		desc:Employees love that they can never have too many mice. There's mice everywhere..<//><b>Effect:</b><.>Further increases click value.
+		req:fasterPC
+		req:mice>40
+		on click:multiply cost of employees by 0.5
+		passive:multiply yield of dollarButton by 6
+		cost:2000 dollars
+
+
+	*extraExtraMice
+		name:Too many mice
+		desc:Management never had it so good with all these mice! They play golf with the mice.<//><b>Effect:</b><.>Further increases click value.
+		req:fasterPC
+		req:mice>40
+		on click:multiply cost of managers by 0.6
 		passive:multiply yield of dollarButton by 6
 		cost:2000 dollars
 
