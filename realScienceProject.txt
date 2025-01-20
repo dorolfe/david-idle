@@ -91,7 +91,7 @@ Buildings
 		on tick:yield 5 dollar
 		unlocked
 
-	*employee|employee
+	*employee|employees
 		name:Employee|Employees
 		desc:Turns out working for someone makes decent money. Now to start climbing the corporate ladder and arguing with your manager.<//><b>Effect:</b><.>Produces 500 dollars per second.
 		icon:icons[3,0]
@@ -306,16 +306,16 @@ Upgrades
 		desc:Employees love that they can never have too many mice. There's mice everywhere..<//><b>Effect:</b><.>Further increases click value.
 		req:fasterPC
 		req:mice>40
-		on click:multiply cost of employees by 0.5
+		on click:multiply cost of employee by 0.5
 		passive:multiply yield of dollarButton by 6
 		cost:2000 dollars
 
 
 	*extraExtraMice
-		name:Too many mice
-		desc:Management never had it so good with all these mice! They play golf with the mice.<//><b>Effect:</b><.>Further increases click value.
+		name:Way too many mice
+		desc:Management never had it so good with all these mice! They play hockey with the mice.<//><b>Effect:</b><.>Further increases click value.
 		req:fasterPC
-		req:mice>40
+		req:mice>60
 		on click:multiply cost of managers by 0.6
 		passive:multiply yield of dollarButton by 6
 		cost:2000 dollars
