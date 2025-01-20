@@ -71,7 +71,7 @@ Buildings
 	*TEMPLATE
 		on click:anim glow
 		req:dollars>0
-		
+/*		
 	*devtool|devtools
 		name:Devtool|devtools
 		desc:to test my stuff
@@ -80,7 +80,7 @@ Buildings
 		on tick:yield 100 bitcoin
 		icon:icons[9,0]
 		unlocked
-
+*/
 // ---------- labor
 
 	*mouse|mice
