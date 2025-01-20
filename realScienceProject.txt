@@ -245,6 +245,7 @@ Upgrades
 		passive:yield 1 dollar
 		on tick:yield 1 dollar
 		cost:100 dollars
+		req:mouse
 
 	*fasterPC
 		name:Faster Computer
