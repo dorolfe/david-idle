@@ -231,8 +231,8 @@ Buildings
 		name:Carbon Capture Plant|Carbon Capture Plants
 		desc:By removing greenhouse gasses from the atmosphere and storing them in materials or underground slows warming<//><b>Effect:</b><.>Cools the planet.
 		icon:icons[10,0]
-		on tick:degrees is degrees-.002 
-		on tick:yield 0.002 cooling 
+		on tick:degrees is degrees-.005 
+		on tick:yield 0.005 cooling 
 		cost:500000 dollars
 		limit:100
 		cost increase:125%
@@ -340,7 +340,7 @@ Upgrades
 		req:sealminer
 		req:CEO>1
 		req:sealminer>5
-		req:1000000000 dollars:earned
+		req:100000000 dollars:earned
 		passive:multiply yield of tag:miner by 1.1
 		passive:degrees is degrees-(sealminer*0.1)
 		passive:yield (sealminer*0.1) cooling
