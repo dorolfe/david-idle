@@ -220,8 +220,8 @@ Buildings
 		icon:icons[14,0]
 		on tick:degrees is degrees-.002
 		on tick:yield .002 cooling
-		on click:degrees is degrees-0.2 
-		on click:yield 0.2 cooling
+		on click:degrees is degrees-0.3 
+		on click:yield 0.3 cooling
 		cost:200000 dollars
 		//limit:100
 		cost increase:110%
@@ -342,9 +342,17 @@ Upgrades
 		req:sealminer>5
 		req:100000000 dollars:earned
 		passive:multiply yield of tag:miner by 1.1
-		passive:degrees is degrees-(sealminer*0.5)
-		passive:yield (sealminer*0.5) cooling
+		passive:degrees is degrees-0.4
+		passive:yield 0.4 cooling
 		cost:200000 dollars
+
+	*pilots
+		name:Ace Pilots
+		desc:Practice makes perfect.<//><b>Effect:</b><.>Greatly decreases the cost of flights.
+		req:cloudSeeding>25
+		req:1000000 dollars:earned
+		passive:multiply cost of cloudSeeding by 0.5
+		cost:100000 dollars
 
 	*onJobTraining
 		name:On Job Training
